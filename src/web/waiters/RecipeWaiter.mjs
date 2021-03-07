@@ -316,7 +316,7 @@ class RecipeWaiter {
                     };
                 } else if (ingList[j].getAttribute("type") === "number") {
                     // number
-                    ingredients[j] = parseFloat(ingList[j].value, 10);
+                    ingredients[j] = parseFloat(ingList[j].value);
                 } else {
                     // all others
                     ingredients[j] = ingList[j].value;
@@ -398,6 +398,8 @@ class RecipeWaiter {
         item.innerHTML = name;
         this.buildRecipeOperation(item);
         document.getElementById("rec-list").appendChild(item);
+
+        $(item).find("[data-toggle='tooltip']").tooltip();
 
         item.dispatchEvent(this.manager.operationadd);
         return item;

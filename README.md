@@ -1,6 +1,7 @@
 # CyberChef
 
-[![Build Status](https://travis-ci.org/gchq/CyberChef.svg?branch=master)](https://travis-ci.org/gchq/CyberChef)
+[![](https://github.com/gchq/CyberChef/workflows/Master%20Build,%20Test%20&%20Deploy/badge.svg)](https://github.com/gchq/CyberChef/actions?query=workflow%3A%22Master+Build%2C+Test+%26+Deploy%22)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/gchq/CyberChef.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/gchq/CyberChef/context:javascript)
 [![dependencies Status](https://david-dm.org/gchq/CyberChef/status.svg)](https://david-dm.org/gchq/CyberChef)
 [![npm](https://img.shields.io/npm/v/cyberchef.svg)](https://www.npmjs.com/package/cyberchef)
 [![](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/gchq/CyberChef/blob/master/LICENSE)
@@ -69,7 +70,15 @@ You can use as many operations as you like in simple or complex ways. Some examp
      - You can save the output to a file at any time or load a file by dragging and dropping it into the input field. Files up to around 2GB are supported (depending on your browser), however some operations may take a very long time to run over this much data.
  - CyberChef is entirely client-side
      - It should be noted that none of your recipe configuration or input (either text or files) is ever sent to the CyberChef web server - all processing is carried out within your browser, on your own computer.
-     - Due to this feature, CyberChef can be compiled into a single HTML file. You can download this file and drop it into a virtual machine, share it with other people, or use it independently on your local machine.
+     - Due to this feature, CyberChef can be downloaded and run locally. You can use the link in the top left corner of the app to download a full copy of CyberChef and drop it into a virtual machine, share it with other people, or host it in a closed network.
+
+
+## Deep linking
+
+By manipulation of CyberChef's URL hash, you can change the initial settings with which the page opens.
+The format is `https://gchq.github.io/CyberChef/#recipe=Operation()&input=...`
+
+Supported arguments are `recipe`, `input` (encoded in Base64), and `theme`. 
 
 
 ## Browser support
